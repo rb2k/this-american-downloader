@@ -1,6 +1,6 @@
 require 'net/http'
 
-episode_list = Net::HTTP.get('www.thisamericanlife.org', '/radio-archives/episode/')
+episode_list = Net::HTTP.get('www.thisamericanlife.org', '/radio-archives')
 current_episode_nr = episode_list[/(\d{3}):/, 1].to_i
 
 1.upto(current_episode_nr) do |number|
